@@ -15,7 +15,7 @@ if (file_exists($DOCUMENT_ROOT . $REQUEST_URI) and ($REQUEST_URI != "/")) {
     //echo $url;
     if ($url == '/roleplaying/') { /* mudar o padrao pelo nome da pasta */
         $paginaAtual =1;
-        include("login.php");
+        include("home.php");
         exit();
     } else {
         $paginaAtual =1;

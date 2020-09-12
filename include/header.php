@@ -17,7 +17,7 @@
                     <a class="nav-link" href="<?php $urlProjeto?>configuracoes" <?php if ($paginaAtual == 1){echo "active";}?>>Configuracoes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" <?php if ($paginaAtual == 1){echo "active";}?>>Sair</a>
+                    <a class="nav-link" href="logout.php">Sair</a>
                 </li>
             </ul>
         </div>

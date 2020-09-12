@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!$_SESSION["session_ativa"]){
+    header("location: login");
+    exit;
+}
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -60,7 +67,7 @@
 
                 <!-- AQUI COMECA AS PUBS -->
                 <?php
-                $sql_publicacao = mysqli_query($conexao, "SELECT * from feed join usuario where feed.user_id = usuario.user_id order by feed_date DESC");
+                $sql_publicacao = mysqli_query($conexao, "SELECT * FROM imagem right outer join feed on imagem.image_id = feed.image_id join usuario on feed.user_id = usuario.user_id order by feed_id DESC");
                 while($l = mysqli_fetch_array($sql_publicacao)){
                 ?>
                 <div class="col-md-12 p-0 mb-3 all-borders rounded-borders">
@@ -82,13 +89,11 @@
                             <span><?php echo $l['feed_message'] ?></span>
                         </div>
                         <?php
-                        if($l['feed_image'] != ''){
+                        if($l['image_blob'] != ''){
                         ?>
                         <div class="col-md-12 text-center">
-                            <a href="<?php echo $urlProjeto?>userfiles/img-pubs/<?php echo $l['feed_image'] ?>"
-                                data-toggle="lightbox">
-                                <img src="<?php echo $urlProjeto?>userfiles/img-pubs/<?php echo $l['feed_image'] ?>"
-                                    class="img-fluid">
+                                <?php echo '<a href="data:image/jpeg;base64,'.base64_encode( $l['image_blob'] ).'" class="img-fluid" data-toggle="lightbox">'; ?>
+                                <?php echo '<img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode( $l['image_blob'] ).'"/>'; ?>
                             </a>
                         </div>
                         <?php } ?>

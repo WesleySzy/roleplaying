@@ -70,3 +70,7 @@
     background-color: #000 !important;
     color: #fff;
 }
+
+img {
+    border-radius: 50%;
+  }

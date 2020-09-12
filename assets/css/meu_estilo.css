@@ -1,0 +1,9 @@
+.all-borders{
+    border: 1px solid #d3d3d3;
+}
+.rounded-borders{
+    border-radius: 5px;
+}
+.custom-file-upload input[type="file"] {
+    display: none;
+}

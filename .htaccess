@@ -1,0 +1,19 @@
+
+RewriteEngine On 
+
+  # RewriteBase instructions 
+  # Change RewriteBase dependent on how your shop is accessed as below. 
+  # http://www.mysite.com = RewriteBase / 
+  # http://www.mysite.com/catalog/ = RewriteBase /catalog/  
+  # http://www.mysite.com/catalog/shop/ = RewriteBase /catalog/shop/ 
+
+  # Change the following line using the instructions above  
+  
+RewriteBase /roleplaying/
+RewriteCond %{REQUEST_FILENAME} !\.(js|gif|jpg|png|css|txt)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*)$ index.php 
+
+
+# End Ultimate SEO V2.2d

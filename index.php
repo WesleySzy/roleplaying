@@ -15,7 +15,7 @@ if (file_exists($DOCUMENT_ROOT . $REQUEST_URI) and ($REQUEST_URI != "/")) {
     //echo $url;
     if ($url == '/roleplaying/') { /* mudar o padrao pelo nome da pasta */
         $paginaAtual =1;
-        include("home.php");
+        include("login.php");
         exit();
     } else {
         $paginaAtual =1;
@@ -45,6 +45,14 @@ if (empty($url_array[1])) {
 } elseif ($url_array[1] == 'home') {
     $paginaAtual =1;
     include("home.php");
+    exit();
+} elseif ($url_array[1] == 'login') {
+    $paginaAtual =1;
+    include("login.php");
+    exit();
+} elseif ($url_array[1] == 'registrar') {
+    $paginaAtual =1;
+    include("registrar.php");
     exit();
 }
 exit();

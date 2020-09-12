@@ -71,6 +71,6 @@
     color: #fff;
 }
 
-img {
-    border-radius: 50%;
-  }
+.imagem-redonda{
+    border-radius: 312px;
+}

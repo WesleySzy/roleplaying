@@ -60,7 +60,7 @@
 
                 <!-- AQUI COMECA AS PUBS -->
                 <?php
-                $sql_publicacao = mysqli_query($conexao, "SELECT * from feed join usuario join imagem where feed.user_id = usuario.user_id order by feed_date DESC");
+                $sql_publicacao = mysqli_query($conexao, "SELECT * FROM imagem right outer join feed on imagem.image_id = feed.image_id join usuario on feed.user_id = usuario.user_id order by feed_id DESC");
                 while($l = mysqli_fetch_array($sql_publicacao)){
                 ?>
                 <div class="col-md-12 p-0 mb-3 all-borders rounded-borders">

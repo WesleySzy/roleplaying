@@ -7,3 +7,6 @@
 .custom-file-upload input[type="file"] {
     display: none;
 }
+img {
+    border-radius: 50%;
+  }

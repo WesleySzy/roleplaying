@@ -13,8 +13,7 @@
     <div class="container">
         <div class="row py-5">
             <div class="col-md-3 d-flex flex-column">
-                <img src="https://scontent.fldb1-1.fna.fbcdn.net/v/t1.0-9/118765451_107382697764738_1455136094544867385_n.jpg?_nc_cat=1&_nc_sid=09cbfe&_nc_ohc=lDx5qF1RvBsAX9gqOoO&_nc_ht=scontent.fldb1-1.fna&oh=ce7f61217c9bc465a0f3d3cff48c071d&oe=5F7991C0"
-                    alt="..." class="img-thumbnail">
+
                 <a href="" class="py-1">SUPER XANDAO</a>
 
 
@@ -22,10 +21,6 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <a href="" class="py-1">Feed</a>
                         <span class="badge badge-primary badge-pill">14</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="" class="py-1">Grupos</a>
-                        <span class="badge badge-primary badge-pill">2</span>
                     </li>
                 </ul>
             </div>
@@ -150,7 +145,7 @@
             element.classList.toggle("dark-mode");
         }
     </script>
-   
+
 </body>
 
 </html>
